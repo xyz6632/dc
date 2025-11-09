@@ -1,0 +1,26 @@
+//Exp 10
+//Information Theory
+//Code :
+
+clc;
+clear;
+
+B = 3.4 * 10^3;
+
+SNR = 30;
+printf("-SNR = %d dB\n", SNR);
+
+SN = 10^(SNR / 10);
+
+C = B * log2(1 + SN);
+
+printf("C = %.2f bps\n", C);
+printf("Information capacity of telephone channel = %.2f kbps\n", C / 1000);
+
+
+
+//Output : 
+
+//-SNR = 30 dB
+//C = 33888.57 bps
+//Information capacity of telephone channel = 33.89 kbps
