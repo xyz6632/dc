@@ -1,58 +1,69 @@
-//Exp 13
-//Source Entropy and information rate
-//Code :
 Exp 13
 
-clear; 
-clc;
 
+Source Entropy and information rate
+
+Code :
+
+clear; // Remove clear, clc from code if you want to access existing stored variable from the memory
+//Page Number: 8.8
+//Example 8.3
+clc;
+//Given,
 G=100;
 G1=(10^(G/10));
 T=30;
 Te=270;
-
+//We know,output noise power=GKB(T+Te)
 K=1.38D-23;
 B=1.5D+6;
 No=G1*1.38D-23*1.5D+6*(T+Te);
 disp('W',No,'Output Noise Power');
 
 
-//Output :
+Output :
 
 
-//Output Noise Power   
-  //  0.0000621  
- //W   
+Output Noise Power   
+    0.0000621  
+ W   
 
 
 
 
-//Code : 
+
+Code : 
 
 clc;
 clear;
 
+// Probabilities
 px1 = 1/2;
 px2 = 1/4;
 px3 = 1/8;
 px4 = 1/16;
 px5 = 1/16;
 
+// Bit duration
 Tb = 10^-3;
 
+// Source entropy calculation (H(X))
 HX = px1*log2(1/px1) + px2*log2(1/px2) + px3*log2(1/px3) + px4*log2(1/px4) + px5*log2(1/px5);
 
 printf("Source Entropy H(X) = %.2f bits/symbol\n", HX);
 
+// Bit rate
 r = 1 / Tb;
 
+// Information rate
 R = r * HX;
 
 printf("Information Rate R = %.2f bits/sec\n", R);
 
 
 
-//Output : 
+Output : 
 
-//Source Entropy H(X) = 1.88 bits/symbol
-//Information Rate R = 1875.00 bits/sec
+Source Entropy H(X) = 1.88 bits/symbol
+Information Rate R = 1875.00 bits/sec
+
