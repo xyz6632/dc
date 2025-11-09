@@ -1,0 +1,31 @@
+//Exp 9
+//Probability of Error
+//Code :
+
+clc;
+clear;
+
+D = poly(0, 'D');
+
+g1D = 1 + D + D^2;
+g2D = 1 + D^2;
+
+mD = 1 + 0*D + 0*D^2 + D^3 + D^4;
+
+x1D = g1D * mD;
+x2D = g2D * mD;
+
+x1 = coeff(x1D);
+x2 = coeff(x2D);
+
+disp(modulo(x1, 2), 'Top output sequence');
+disp(modulo(x2, 2), 'Bottom output sequence');
+
+
+
+//Output : 
+
+//Top output sequence   
+//    1.    1.    1.    1.    0.    0.    1.  
+ //Bottom output sequence   
+  //  1.    0.    1.    1.    1.    1.    1.
