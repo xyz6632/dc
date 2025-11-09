@@ -1,0 +1,21 @@
+//Exp 11
+//Information capacity
+//Code :
+
+clear;
+clc;
+
+dmin = 5;        
+s = dmin - 1;  
+printf("number of detected errors - s <= %d", s);
+
+t = (dmin - 1) / 2;
+
+printf("\nnumber of corrected errors - t <= %d", t);
+
+
+
+//Output : 
+
+//number of detected errors - s <= 4 
+//number of corrected errors - t <= 2
