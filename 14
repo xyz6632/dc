@@ -1,6 +1,6 @@
+//Exp 14 
 //Efficiency and Redundancy
-
-Code :
+//Code :
 
 clc;
 clear;
@@ -31,3 +31,44 @@ printf("Code redundancy = %.2f%%\n", r * 100);
 
 //Code efficiency = 72.71%
 //Code redundancy = 27.29%
+
+
+
+
+
+//Code 2 : 
+
+clear; 
+clc;
+
+
+K = 1.38D-23;
+B = 40D+6;
+Tant = 600;    
+Trec = 3000;   
+G = 80;        
+GG = 10^(G/10);
+
+Nant = K * Tant * B; 
+disp('W', Nant, 'Nant=');
+
+Nrec = K * Trec * B; 
+disp('W', Nrec, 'Nrec=');
+
+Nout = (Nant + Nrec) * GG;
+disp('W', Nout, 'Receiver Noise Power Output=');
+
+
+//Output : 
+
+//Nant=   
+  //  3.312D-13  
+ //W   
+ //Nrec=   
+//    1.656D-12  
+ //W   
+ //Receiver Noise Power Output=   
+   // 0.0001987  
+// W
+
+
