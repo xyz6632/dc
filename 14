@@ -1,74 +1,86 @@
-//Exp 14 
-//Efficiency and Redundancy
-//Code :
+Exp 14 
+
+
+Efficiency and Redundancy
+
+Code :
 
 clc;
 clear;
 
+// Probabilities of symbols
 pa1 = 0.81;
 pa2 = 0.09;
 pa3 = 0.09;
 pa4 = 0.01;
 
+// Codeword lengths
 n1 = 1;
 n2 = 2;
 n3 = 3;
 n4 = 3;
 
+// Average codeword length
 L = pa1*n1 + pa2*n2 + pa3*n3 + pa4*n4;
 
+// Source entropy (H(X))
 HX = pa1*log2(1/pa1) + pa2*log2(1/pa2) + pa3*log2(1/pa3) + pa4*log2(1/pa4);
 
+// Code efficiency
 n = HX / L;
 printf("Code efficiency = %.2f%%\n", n * 100);
 
+// Code redundancy
 r = 1 - n;
 printf("Code redundancy = %.2f%%\n", r * 100);
 
 
 
-//Output : 
+Output : 
 
-//Code efficiency = 72.71%
-//Code redundancy = 27.29%
-
-
+Code efficiency = 72.71%
+Code redundancy = 27.29%
 
 
 
-//Code 2 : 
 
-clear; 
+
+
+
+
+Code 2 : 
+
+clear; // Remove clear, clc if you want to access existing stored variables from memory
 clc;
 
-
+// Given
 K = 1.38D-23;
 B = 40D+6;
-Tant = 600;    
-Trec = 3000;   
-G = 80;        
+Tant = 600;    // Kelvin
+Trec = 3000;   // Kelvin
+G = 80;        // dB
 GG = 10^(G/10);
 
-Nant = K * Tant * B; 
+// Input noise power from antenna
+Nant = K * Tant * B; // W
 disp('W', Nant, 'Nant=');
 
-Nrec = K * Trec * B; 
+Nrec = K * Trec * B; // W
 disp('W', Nrec, 'Nrec=');
 
+// Receiver noise power output
 Nout = (Nant + Nrec) * GG;
 disp('W', Nout, 'Receiver Noise Power Output=');
 
 
-//Output : 
+Output : 
 
-//Nant=   
-  //  3.312D-13  
- //W   
- //Nrec=   
-//    1.656D-12  
- //W   
- //Receiver Noise Power Output=   
-   // 0.0001987  
-// W
-
-
+Nant=   
+    3.312D-13  
+ W   
+ Nrec=   
+    1.656D-12  
+ W   
+ Receiver Noise Power Output=   
+    0.0001987  
+ W
