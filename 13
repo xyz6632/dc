@@ -1,9 +1,9 @@
 //Exp 13
 //Source Entropy and information rate
 //Code :
+Exp 13
 
 clear; 
-
 clc;
 
 G=100;
@@ -22,4 +22,37 @@ disp('W',No,'Output Noise Power');
 
 //Output Noise Power   
   //  0.0000621  
- //W
+ //W   
+
+
+
+
+//Code : 
+
+clc;
+clear;
+
+px1 = 1/2;
+px2 = 1/4;
+px3 = 1/8;
+px4 = 1/16;
+px5 = 1/16;
+
+Tb = 10^-3;
+
+HX = px1*log2(1/px1) + px2*log2(1/px2) + px3*log2(1/px3) + px4*log2(1/px4) + px5*log2(1/px5);
+
+printf("Source Entropy H(X) = %.2f bits/symbol\n", HX);
+
+r = 1 / Tb;
+
+R = r * HX;
+
+printf("Information Rate R = %.2f bits/sec\n", R);
+
+
+
+//Output : 
+
+//Source Entropy H(X) = 1.88 bits/symbol
+//Information Rate R = 1875.00 bits/sec
