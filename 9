@@ -1,31 +1,31 @@
-//Exp 9
-//Probability of Error
-//Code :
+Exp 9
 
-clc;
+
+Probability of Error
+
+Code  -
+
 clear;
+clc;
+p=0.1;
+p_undeterr1=6*(p^2)*((1-p)^2)+(p^4);
+printf("p=%f\n",p);
+printf("p_undeterr1=%f\n", p_undeterr1);
+disp("probability of error in detection for p=0.1 is " +string(p_undeterr1));
 
-D = poly(0, 'D');
-
-g1D = 1 + D + D^2;
-g2D = 1 + D^2;
-
-mD = 1 + 0*D + 0*D^2 + D^3 + D^4;
-
-x1D = g1D * mD;
-x2D = g2D * mD;
-
-x1 = coeff(x1D);
-x2 = coeff(x2D);
-
-disp(modulo(x1, 2), 'Top output sequence');
-disp(modulo(x2, 2), 'Bottom output sequence');
+p=0.01;
+p_undeterr2=6*(p^2)*((1-p)^2)+(p^4);
+printf("\np=%f\n",p);
+printf("p_undeterr2=%f\n",p_undeterr2);
+disp("probability of error in detection for p=0.01 is " +string(p_undeterr2));
 
 
+Output -
 
-//Output : 
 
-//Top output sequence   
-//    1.    1.    1.    1.    0.    0.    1.  
- //Bottom output sequence   
-  //  1.    0.    1.    1.    1.    1.    1.
+p=0.100000
+p_undeterr1=0.048700
+ probability of error in detection for p=0.1 is 0.0487   
+p=0.010000
+p_undeterr2=0.000588
+ probability of error in detection for p=0.01 is 0.0005881
