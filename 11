@@ -1,6 +1,10 @@
-//Exp 11
-//Information capacity
-//Code :
+Exp 11
+
+
+Information capacity
+
+
+Code :
 
 clear;
 clc;
@@ -15,7 +19,7 @@ printf("\nnumber of corrected errors - t <= %d", t);
 
 
 
-//Output : 
+Output : 
 
-//number of detected errors - s <= 4 
-//number of corrected errors - t <= 2
+number of detected errors - s <= 4 
+number of corrected errors - t <= 2
